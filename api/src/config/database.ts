@@ -6,7 +6,7 @@ const setupDatabase = async () => {
     host: 'localhost',
     dialect: 'postgres',
     port: 5433,
-    logging: true,
+    logging: console.log, // Corrigido para usar uma função
     dialectOptions: {
       connectTimeout: 60000 // aumentando o timeout para 1 minuto
     }
@@ -30,7 +30,7 @@ const sequelize = new Sequelize('scheduling_app', 'postgres', '1234', {
   host: 'localhost',
   dialect: 'postgres',
   port: 5433,
-  logging: true,
+  logging: console.log, // Corrigido para usar uma função
   dialectOptions: {
     connectTimeout: 60000 // aumentando o timeout para 1 minuto
   }
